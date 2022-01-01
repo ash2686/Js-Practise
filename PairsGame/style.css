@@ -1,0 +1,124 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    transition: all 1s ease-in-out;
+    animation: all 1s;
+}
+
+.main-container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #4f5f76;
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    flex-direction: column;
+}
+
+.top-text{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* border: 1px solid rgb(68, 68, 68); */
+    font-size: 1.5rem;
+
+}
+#winner{
+    font-size: 3rem;
+    /* margin-bottom: 5rem; */
+    /* display:none; */
+    color: rgb(22, 22, 22);
+}
+
+#game-timer{
+    width: 100%;
+    height: 5%;
+    /* background-color:#020d1e; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: rgb(0, 0, 0);
+    /* margin-top: 5rem; */
+    
+}
+
+.main-display{
+    width: 100%;
+    height: 70%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cards-display{
+    width: 80%;
+    height: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-shelf,.bottom-shelf{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blocks{
+    width: 15%;
+    height: 80%;
+    border: 1px solid black;
+    margin: 0 1rem;
+    border-radius: 5px;
+    background: url(images/back6.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    /* color: rgb(190, 190, 190); */
+    /* transition: all 5s; */
+    /* z-index: 100; */
+    /* transform: translate(180deg); */
+    /* animation: start 1s ease-out; */
+}
+
+.matchEffect{
+    animation: start .5s ease-in-out;
+}
+
+.noclick{
+    pointer-events: none; 
+}   
+
+.noclick1{
+    background-color: #4f5f76;
+    border:0;
+    z-index:100;
+}  
+
+@keyframes start {
+    0%{
+        background-color:#4f5f76;
+        
+    }
+    100%{
+      background-color: paleturquoise;
+    }
+    
+}
+
+@keyframes flipCard {
+      0%{
+        opacity: .5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
