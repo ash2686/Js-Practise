@@ -43,7 +43,7 @@
     justify-content: center;
     align-items: center;
     font-size: 3rem;
-    color: rgb(0, 0, 0);
+    color: rgb(22, 22, 22);
     /* margin-top: 5rem; */
     
 }
@@ -77,16 +77,28 @@
     height: 80%;
     border: 1px solid black;
     margin: 0 1rem;
-    border-radius: 5px;
+    border-radius: 10px;
     background: url(images/back6.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    position: relative;
     /* color: rgb(190, 190, 190); */
     /* transition: all 5s; */
     /* z-index: 100; */
     /* transform: translate(180deg); */
     /* animation: start 1s ease-out; */
+}
+
+.block::after{
+    content:"";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    z-index: 0;
+    background-color: rgb(0, 0, 0,1);
 }
 
 .matchEffect{

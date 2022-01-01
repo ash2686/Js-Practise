@@ -17,6 +17,8 @@ let interval;
 let secs = 0;
 let mins = 0;
 let timerFlag = 0;
+let num;
+let a;
 
 
 
@@ -32,7 +34,7 @@ gameLogic();
 function setupCards() {
   for (let i = 0; i < finals.length; i++) {
     cards[i].style.backgroundImage = `url(images/${finals[i]}.jpg)`;
-    cards[i].style.backgroundImage = "url(images/back6.jpg)";
+    cards[i].style.backgroundImage = "url(images/backNew2.jpeg)";
   }
 }
 
@@ -109,10 +111,10 @@ function flip(i, crds, clcks, interval) {
                                                                   winner.style.display = "block";
                                                                   winner.style.marginTop = "7rem";
                                                                   winner.innerHTML = "Good Stuff, keep it up";
-                                                                  gameTimer.style.color = "black";
+                                                                  // gameTimer.style.color = "black";
                                                                   // gameTimer.innerHTML= "Good Stuff";
 
-                                                                  gameTimer.innerHTML = `Took you:  ${mins} mins ${secs} secs`;
+                                                                  gameTimer.innerHTML = `Took you ${mins} mins ${secs} secs`;
 
                                     }
 
@@ -122,11 +124,13 @@ function flip(i, crds, clcks, interval) {
   else {
         for (x = 0; x < 2; x++) {
           cards[clcks[x]].style.transform = "rotateY(360deg)";
-          cards[clcks[x]].style.transform = "rotateY(360deg)";
-          cards[clcks[x]].style.backgroundImage = "url(images/back6.jpg)";
-          cards[clcks[x]].style.backgroundImage = "url(images/back6.jpg)";
-
-          // console.log(clcks)
+          // cards[clcks[x]].style.backgroundImage = "url(images/backNew1.jpeg)";
+         
+          reverseCard(clcks,x);
+          // setTimeout(() => {
+          //   cards[clcks[x]].style.border = "5px solid white";
+          //   cards[clcks[x]].style.backgroundImage = `url(images/${finals[i]}.jpg)`;
+          // }, 540)        
     }
   }
   gameLogic();
@@ -135,10 +139,7 @@ function flip(i, crds, clcks, interval) {
 
 function matchAnimation() {
   mainScreen.classList.add("matchEffect");
-
 }
-
-
 function gameTime(){
       
         interval = setInterval(function () {
@@ -156,6 +157,18 @@ function gameTime(){
         }, 1000);
         
       }
+
+
+       
+
+      function reverseCard(clcks,x){
+           setTimeout(() => {
+                     cards[clcks[x]].style.backgroundImage = "url(images/backNew2.jpeg)";
+
+          }, 540)   
+      }
+
+
 
   // console.log("actual cards clcks[0] = " + clcks[0]);
   // console.log("actual cards clcks[1] = " + clcks[1]);
