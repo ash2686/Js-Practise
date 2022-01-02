@@ -82,6 +82,9 @@ function flip(i, crds, clcks, interval) {
   if (a > 4) { a = a - 5; };
   if (b < 5) { b = b + 5; };
 
+  cards[clcks[0]].style.border = "1px solid black";
+  cards[clcks[1]].style.border = "1px solid black";
+
 
   if (finals[a] === finals[b - 5]) {
                                     cards[clcks[0]].style.backgroundImage = "none";
