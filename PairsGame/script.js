@@ -58,7 +58,7 @@ function gameLogic() {
                                           // cards[i].style.animation = "flipCard 2s";
                                           
                                                     setTimeout(() => {
-                                                      cards[i].style.border = "5px solid white";
+                                                      cards[i].style.border = "2px solid white";
                                                       cards[i].style.backgroundImage = `url(images/${finals[i]}.jpg)`;
                                                     }, 540)
                                           // cards[i].style.border = "5px solid white";
@@ -136,6 +136,8 @@ function flip(i, crds, clcks, interval) {
           // }, 540)        
     }
   }
+  for (let j = 0; j < 10; j++) {cards[j].classList.remove("noclick");}
+
   gameLogic();
 }
 
@@ -167,8 +169,8 @@ function gameTime(){
       function reverseCard(clcks,x){
            setTimeout(() => {
                      cards[clcks[x]].style.backgroundImage = "url(images/backNew2.jpeg)";
-
           }, 540)   
+          for (let j = 0; j < 10; j++) {cards[j].classList.add("noclick");}
       }
 
 
